@@ -56,7 +56,7 @@ function App() {
             <button
               type="button"
               className="btn btn-primary btn-sm"
-              onClick={() => dodajDoKoszyka(produkt)}
+              onClick={() => dodajdoKoszyka(produkt)}
             >
               Do koszyka
             </button>

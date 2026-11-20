@@ -17,4 +17,21 @@ function App() {
     console.log(`Koszyk: ${liczbaPozycji} pozycji; suma: ${suma.toFixed(2)}`);
   };
 
+  const dodajDoKoszyka = (produkt) => {
+    const istniejeWKoszyku = koszyk.some((item) => item.id === produkt.id);
+    let nowyKoszyk;
+
+    if (istniejeWKoszyku) {
+      nowyKoszyk = koszyk.map((item) =>
+        item.id === produkt.id ? { ...item, ilosc: item.ilosc + 1 } : item
+      );
+    } else {
+      nowyKoszyk = [...koszyk, { ...produkt, ilosc: 1 }];
+    }
+
+    setKoszyk(nowyKoszyk);
+    wypiszStanKonsoli(nowyKoszyk);
+  };
+
+
 }

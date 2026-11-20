@@ -33,5 +33,12 @@ function App() {
     wypiszStanKonsoli(nowyKoszyk);
   };
 
+  const usunZKoszyka = (idProduktu) => {
+    const nowyKoszyk = koszyk.filter((item) => item.id !== idProduktu);
+    setKoszyk(nowyKoszyk);
+    wypiszStanKonsoli(nowyKoszyk);
+  };
+
+
 
 }
